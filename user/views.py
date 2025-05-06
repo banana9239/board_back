@@ -14,8 +14,6 @@ from .models import User
 
 class Me(APIView):
 
-    permission_classes = [IsAuthenticated]
-
     def get(self, request):
         serializer = serializers.UserDetailSerializer(request.user)
         return Response(serializer.data)
