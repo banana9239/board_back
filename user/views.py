@@ -109,7 +109,7 @@ class Github(APIView):
             code = request.data.get("code")
             if not code:
                 raise ParseError("No code.")
-            access_token = requests.post(f"https://github.com/login/oauth/access_token?code={code}&client_id=Ov23liduaLQ9hsV8PA29&client_secret={settings.GH_SECRET}",
+            access_token = requests.post(f"https://github.com/login/oauth/access_token?code={code}&client_id=Iv23liJ0sUDaHyhdk9pf&client_secret={settings.GH_SECRET}",
                                         headers={"Accept":"application/json"})
             access_token = access_token.json().get("access_token")
 
