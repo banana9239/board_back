@@ -35,7 +35,10 @@ DEBUG = 'RENDER' not in os.environ
 
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 
-ALLOWED_HOSTS = ["https://board-0h8i.onrender.com"]
+ALLOWED_HOSTS = [
+    "board-0h8i.onrender.com",
+    "board-front-98x2.onrender.com",
+    ]
 
 if RENDER_EXTERNAL_HOSTNAME:
     ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
